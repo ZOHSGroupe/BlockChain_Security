@@ -36,4 +36,6 @@ Brief description of your project.
    https://trufflesuite.com/ganache/
 
 # Contact
-If you have any questions or issues, feel free to contact: **ziad.bensaada7@gmail.com**
+If you have any questions or issues, feel free to contact: 
+Gmail: **ziad.bensaada7@gmail.com**
+Linkedin: **https://www.linkedin.com/in/ziad-ben-saada-850219226/**
