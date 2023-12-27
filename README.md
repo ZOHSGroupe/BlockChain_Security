@@ -34,3 +34,6 @@ Brief description of your project.
 7. **Install Ganache (The local BlockChain)**
 
    https://trufflesuite.com/ganache/
+
+# Contact
+If you have any questions or issues, feel free to contact: **ziad.bensaada7@gmail.com**
