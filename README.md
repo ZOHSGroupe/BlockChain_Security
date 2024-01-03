@@ -1,6 +1,6 @@
 # BlockChain_Security
 
-Brief description of your project.
+Our project aims to develop a decentralized crowdfunding application using blockchain technology, specifically the Ethereum platform. This decentralized application (DApp) will enable users to create, fund, and participate in crowdfunding campaigns securely and transparently..
 
 ## Setup
 
@@ -17,25 +17,41 @@ Brief description of your project.
 
      npm install
 
-# Smart Contract Development
+## Smart Contract Development
 4. **Install Truffle globally (if not installed):**
 
   npm install -g truffle
 
-# Testing
-5. **Run the Truffle tests:**
+## Ganache
+5. **Install Ganache (The local BlockChain)**
+   
+   npm install -g ganache-cli
+   
+   https://trufflesuite.com/ganache/
 
-   truffle test
-# Deployment
-6. **Deploy your smart contracts to a specific network (replace network_name with the desired network, Go to truffle-config.js and uncomment the network and choose the name of the network ):**
+## Express-box
+6. **Download the box. This also takes care of installing the necessary dependencies.**
+
+      truffle unbox arvindkalra/express-box
+
+## Truffle Development
+7. **Start truffle development console using**
+
+      truffle develop
+
+## Deployment
+8. **Deploy your smart contracts to a specific network (replace network_name with the desired network, Go to truffle-config.js and uncomment the network and choose the name of the network )**
 
    truffle migrate --network network_name
 
-7. **Install Ganache (The local BlockChain)**
+## Run Express Server
+9. **To run the Express server**
 
-   https://trufflesuite.com/ganache/
+    npm start
 
-# Contact
+   http://localhost:3000/
+   
+## Contact
 If you have any questions or issues, feel free to contact:
 
    Gmail: **ziad.bensaada7@gmail.com**
