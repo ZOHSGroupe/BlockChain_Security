@@ -33,7 +33,8 @@ Brief description of your project.
 
 7. **Install Ganache (The local BlockChain)**
    npm install -g ganache-cli
-    https://trufflesuite.com/ganache/
+   
+   https://trufflesuite.com/ganache/
 
 # Contact
 If you have any questions or issues, feel free to contact:
