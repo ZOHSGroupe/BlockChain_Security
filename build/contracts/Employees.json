@@ -30,7 +30,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"getEmployee\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"}],\"name\":\"setEmployee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Employees.sol\":\"Employees\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Employees.sol\":{\"keccak256\":\"0x9ca175c4c9f51efb1eadb0a6ebc22a18432f61d843789cf62d31c0ab2b4c2c8f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a07663edda5297204bbab3e793bd65a70fd66eeb50565fca69e844b2f03df404\",\"dweb:/ipfs/QmZXbnVokzrEcMy8TbFFzwF3VyeFTgtM2sUTG4SAfSRdnd\"]}},\"version\":1}",
@@ -3351,12 +3352,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x408DBDe97aBAB5464029Ac5bd87BBAA9Bd2547aF",
-      "transactionHash": "0x34f51b0ae3a3f922b39c06b21d25ae0a9c4dbca0d8c6e8ef804221e86111ec3b"
+      "address": "0xdF363E723Cbd2a5f1bDDCDE6ce644b46Ecc0f96F",
+      "transactionHash": "0xb7e0e8c530b70bec34e9d8f65a46f071eae4a80cdf227d9912f1e5a76c3090a8"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-12-25T11:30:29.128Z",
+  "updatedAt": "2023-12-27T15:03:31.060Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
