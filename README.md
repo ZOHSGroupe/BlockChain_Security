@@ -32,6 +32,7 @@ Brief description of your project.
    truffle migrate --network network_name
 
 7. **Install Ganache (The local BlockChain)**
+   
    npm install -g ganache-cli
    
    https://trufflesuite.com/ganache/
