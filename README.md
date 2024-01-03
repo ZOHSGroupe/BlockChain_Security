@@ -22,21 +22,34 @@ Brief description of your project.
 
   npm install -g truffle
 
-# Testing
-5. **Run the Truffle tests:**
-
-   truffle test
-# Deployment
-6. **Deploy your smart contracts to a specific network (replace network_name with the desired network, Go to truffle-config.js and uncomment the network and choose the name of the network ):**
-
-   truffle migrate --network network_name
-
-7. **Install Ganache (The local BlockChain)**
+# Ganache
+5. **Install Ganache (The local BlockChain)**
    
    npm install -g ganache-cli
    
    https://trufflesuite.com/ganache/
 
+# Express-box
+6. **Download the box. This also takes care of installing the necessary dependencies.**
+
+      truffle unbox arvindkalra/express-box
+
+7. **Start truffle development console using**
+
+      truffle develop
+
+# Deployment
+8. **Deploy your smart contracts to a specific network (replace network_name with the desired network, Go to truffle-config.js and uncomment the network and choose the name of the network ):**
+
+   truffle migrate --network network_name
+
+# Run Express Server
+9. **To run the Express server**
+
+    npm start
+
+   http://localhost:3000/
+   
 # Contact
 If you have any questions or issues, feel free to contact:
 
