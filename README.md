@@ -34,6 +34,7 @@ Brief description of your project.
 
       truffle unbox arvindkalra/express-box
 
+# Truffle Development
 7. **Start truffle development console using**
 
       truffle develop
