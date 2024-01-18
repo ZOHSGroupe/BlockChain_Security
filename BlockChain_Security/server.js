@@ -89,12 +89,46 @@ app.get('/api/transaction/:id', (req, res) => {
   })
 });
 
+//Get Private Key
+app.get('/api/privatekey/:id', (req, res) => {
+  var web3= new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
+  truffle_connect.start(function (answer) {
+    var accountPrivateKey=web3.eth.accounts.privateKeyToAccount(answer[req.params.id]); 
+    res.status(200).send({
+      Success:'true',
+      AccountPrivateKey:accountPrivateKey.privateKey,
+    });
+  })
+});
+
+//Get Book Info
+app.get('/api/get/book', (req, res) => {
+  truffle_connect.getBook( (answer) => {
+    res.send(answer);
+  });
+});
+
+//Sell Book
+app.post('/api/sell/book/:id', (req, res) => {
+  console.log(req.body);
+  var web3= new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
+  let fullname = req.body.fullname;
+  let description = req.body.description;
+  let price =web3.utils.toWei(req.body.price,'ether');
+    truffle_connect.start(function (answer) {
+      console.log(answer[req.params.id]);
+      truffle_connect.sellBook(answer[req.params.id],fullname,description,price, (answer) => {
+      res.send(answer);
+    });
+  });
+});
+
 app.post('/getBalance', (req, res) => {
   console.log("**** GET /getBalance ****");
   console.log(req.body);
-  let currentAcount = req.body.account;
+  let currentAccount = req.body.account;
 
-  truffle_connect.refreshBalance(currentAcount, (answer) => {
+  truffle_connect.refreshBalance(currentAccount, (answer) => {
     let account_balance = answer;
     truffle_connect.start(function(answer){
       // get list of all accounts and send it along with the response

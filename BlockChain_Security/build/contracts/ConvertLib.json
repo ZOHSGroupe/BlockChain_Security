@@ -28,36 +28,36 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ConvertLib.sol\":{\"keccak256\":\"0x5dadde717c5e0ef47bbbcede030ac7bcd8b4f8b2604b8127ab34cf7b8fdf3308\",\"urls\":[\"bzz-raw://b5a5654cea3934cbc524445bd67db81b3e3a02bf0b4ce9dde93ca3d7918c8aa0\",\"dweb:/ipfs/QmUj9SnSY9oNjnXnXo8ACN8WLhyUuq8nuQNoD9TF6WBEba\"]}},\"version\":1}",
-  "bytecode": "0x60c3610025600b82828239805160001a60731461001857fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea265627a7a72315820c1f6dc4c7a721c6d29abe404bf8bf82bad63cf4bea4ea5bdf86b38036542955064736f6c63430005100032",
-  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea265627a7a72315820c1f6dc4c7a721c6d29abe404bf8bf82bad63cf4bea4ea5bdf86b38036542955064736f6c63430005100032",
-  "sourceMap": "67:170:1:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
-  "deployedSourceMap": "67:170:1:-;;;;;;;;;;;;;;;;;;;;;;;;91:144;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;91:144:1;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;162:20;214:14;205:6;:23;198:30;;91:144;;;;:::o",
-  "source": "// SPDX-License-Identifier: MIT \npragma solidity >=0.4.22 <0.9.0;\n\nlibrary ConvertLib{\n    function convert(uint amount,uint conversionRate) public pure returns (uint convertedAmount)\n    {\n        return amount * conversionRate;\n    }\n}\n",
-  "sourcePath": "C:\\Users\\Administrateur\\Desktop\\solidity\\myProject\\contracts\\ConvertLib.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ConvertLib.sol\":{\"keccak256\":\"0xe976cab36a0e0343cdc406930032478a55ff292500ed01140aca8abce00042b9\",\"urls\":[\"bzz-raw://0e044f397aec0572d88aa662125433bf5f9222b30dea912255df8cbf1b8d7f24\",\"dweb:/ipfs/Qmcw6yzCmJvB2ngST6BFimFcuk2uuWREzBYx1tHFB3oevW\"]}},\"version\":1}",
+  "bytecode": "0x60a3610024600b82828239805160001a607314601757fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b605860048036036040811015604c57600080fd5b5080359060200135606a565b60408051918252519081900360200190f35b029056fea265627a7a72315820bab0c450147dd863b793f80cd25d87a048223ea01bdf0e49c3f5740676dcd4d464736f6c63430005100032",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b605860048036036040811015604c57600080fd5b5080359060200135606a565b60408051918252519081900360200190f35b029056fea265627a7a72315820bab0c450147dd863b793f80cd25d87a048223ea01bdf0e49c3f5740676dcd4d464736f6c63430005100032",
+  "sourceMap": "66:168:2:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "66:168:2:-;;;;;;;;;;;;;;;;;;;;;;;;91:141;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;91:141:2;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;202:23;;91:141::o",
+  "source": "// SPDX-License-Identifier: MIT \npragma solidity >=0.4.0 <0.9.0;\n\nlibrary ConvertLib {\n    function convert(uint amount, uint conversionRate) public pure returns (uint convertedAmount) {\n        return amount * conversionRate;\n    }\n}\n\n",
+  "sourcePath": "C:\\Users\\Administrateur\\Desktop\\solidity\\BlockChain_Security\\contracts\\ConvertLib.sol",
   "ast": {
     "absolutePath": "project:/contracts/ConvertLib.sol",
     "exportedSymbols": {
       "ConvertLib": [
-        72
+        124
       ]
     },
-    "id": 73,
+    "id": 125,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 57,
+        "id": 109,
         "literals": [
           "solidity",
           ">=",
           "0.4",
-          ".22",
+          ".0",
           "<",
           "0.9",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:32:1"
+        "src": "33:31:2"
       },
       {
         "baseContracts": [],
@@ -65,18 +65,18 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 72,
+        "id": 124,
         "linearizedBaseContracts": [
-          72
+          124
         ],
         "name": "ConvertLib",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 70,
+              "id": 122,
               "nodeType": "Block",
-              "src": "188:47:1",
+              "src": "185:47:2",
               "statements": [
                 {
                   "expression": {
@@ -85,19 +85,19 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 68,
+                    "id": 120,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 66,
+                      "id": 118,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 59,
-                      "src": "205:6:1",
+                      "referencedDeclaration": 111,
+                      "src": "202:6:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -107,48 +107,48 @@
                     "operator": "*",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 67,
+                      "id": 119,
                       "name": "conversionRate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 61,
-                      "src": "214:14:1",
+                      "referencedDeclaration": 113,
+                      "src": "211:14:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "205:23:1",
+                    "src": "202:23:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 65,
-                  "id": 69,
+                  "functionReturnParameters": 117,
+                  "id": 121,
                   "nodeType": "Return",
-                  "src": "198:30:1"
+                  "src": "195:30:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 71,
+            "id": 123,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "convert",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 62,
+              "id": 114,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 59,
+                  "id": 111,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 71,
-                  "src": "108:11:1",
+                  "scope": 123,
+                  "src": "108:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -156,10 +156,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58,
+                    "id": 110,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "108:4:1",
+                    "src": "108:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -170,11 +170,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 113,
                   "name": "conversionRate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 71,
-                  "src": "120:19:1",
+                  "scope": 123,
+                  "src": "121:19:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -182,10 +182,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 112,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "120:4:1",
+                    "src": "121:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -195,19 +195,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "107:33:1"
+              "src": "107:34:2"
             },
             "returnParameters": {
-              "id": 65,
+              "id": 117,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 64,
+                  "id": 116,
                   "name": "convertedAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 71,
-                  "src": "162:20:1",
+                  "scope": 123,
+                  "src": "163:20:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -215,10 +215,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 63,
+                    "id": 115,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "162:4:1",
+                    "src": "163:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -228,27 +228,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "161:22:1"
+              "src": "162:22:2"
             },
-            "scope": 72,
-            "src": "91:144:1",
+            "scope": 124,
+            "src": "91:141:2",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 73,
-        "src": "67:170:1"
+        "scope": 125,
+        "src": "66:168:2"
       }
     ],
-    "src": "33:205:1"
+    "src": "33:203:2"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/ConvertLib.sol",
       "exportedSymbols": {
         "ConvertLib": [
-          72
+          124
         ]
       }
     },
@@ -259,15 +259,15 @@
             "solidity",
             ">=",
             "0.4",
-            ".22",
+            ".0",
             "<",
             "0.9",
             ".0"
           ]
         },
-        "id": 57,
+        "id": 109,
         "name": "PragmaDirective",
-        "src": "33:32:1"
+        "src": "33:31:2"
       },
       {
         "attributes": {
@@ -281,10 +281,10 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            72
+            124
           ],
           "name": "ConvertLib",
-          "scope": 73
+          "scope": 125
         },
         "children": [
           {
@@ -297,7 +297,7 @@
                 null
               ],
               "name": "convert",
-              "scope": 72,
+              "scope": 124,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "public"
@@ -309,7 +309,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "amount",
-                      "scope": 71,
+                      "scope": 123,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -322,20 +322,20 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 58,
+                        "id": 110,
                         "name": "ElementaryTypeName",
-                        "src": "108:4:1"
+                        "src": "108:4:2"
                       }
                     ],
-                    "id": 59,
+                    "id": 111,
                     "name": "VariableDeclaration",
-                    "src": "108:11:1"
+                    "src": "108:11:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "conversionRate",
-                      "scope": 71,
+                      "scope": 123,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -348,19 +348,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 60,
+                        "id": 112,
                         "name": "ElementaryTypeName",
-                        "src": "120:4:1"
+                        "src": "121:4:2"
                       }
                     ],
-                    "id": 61,
+                    "id": 113,
                     "name": "VariableDeclaration",
-                    "src": "120:19:1"
+                    "src": "121:19:2"
                   }
                 ],
-                "id": 62,
+                "id": 114,
                 "name": "ParameterList",
-                "src": "107:33:1"
+                "src": "107:34:2"
               },
               {
                 "children": [
@@ -368,7 +368,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "convertedAmount",
-                      "scope": 71,
+                      "scope": 123,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -381,25 +381,25 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 63,
+                        "id": 115,
                         "name": "ElementaryTypeName",
-                        "src": "162:4:1"
+                        "src": "163:4:2"
                       }
                     ],
-                    "id": 64,
+                    "id": 116,
                     "name": "VariableDeclaration",
-                    "src": "162:20:1"
+                    "src": "163:20:2"
                   }
                 ],
-                "id": 65,
+                "id": 117,
                 "name": "ParameterList",
-                "src": "161:22:1"
+                "src": "162:22:2"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 65
+                      "functionReturnParameters": 117
                     },
                     "children": [
                       {
@@ -423,13 +423,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 59,
+                              "referencedDeclaration": 111,
                               "type": "uint256",
                               "value": "amount"
                             },
-                            "id": 66,
+                            "id": 118,
                             "name": "Identifier",
-                            "src": "205:6:1"
+                            "src": "202:6:2"
                           },
                           {
                             "attributes": {
@@ -437,43 +437,43 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 61,
+                              "referencedDeclaration": 113,
                               "type": "uint256",
                               "value": "conversionRate"
                             },
-                            "id": 67,
+                            "id": 119,
                             "name": "Identifier",
-                            "src": "214:14:1"
+                            "src": "211:14:2"
                           }
                         ],
-                        "id": 68,
+                        "id": 120,
                         "name": "BinaryOperation",
-                        "src": "205:23:1"
+                        "src": "202:23:2"
                       }
                     ],
-                    "id": 69,
+                    "id": 121,
                     "name": "Return",
-                    "src": "198:30:1"
+                    "src": "195:30:2"
                   }
                 ],
-                "id": 70,
+                "id": 122,
                 "name": "Block",
-                "src": "188:47:1"
+                "src": "185:47:2"
               }
             ],
-            "id": 71,
+            "id": 123,
             "name": "FunctionDefinition",
-            "src": "91:144:1"
+            "src": "91:141:2"
           }
         ],
-        "id": 72,
+        "id": 124,
         "name": "ContractDefinition",
-        "src": "67:170:1"
+        "src": "66:168:2"
       }
     ],
-    "id": 73,
+    "id": 125,
     "name": "SourceUnit",
-    "src": "33:205:1"
+    "src": "33:203:2"
   },
   "compiler": {
     "name": "solc",
@@ -483,12 +483,18 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x255074D9F53eF1266B91A98265fbF4F2e65dB532",
-      "transactionHash": "0x74e6d79ebdd545ee0c006f6fcf079cc6c16eb72a18537f488601653fb0de1bd0"
+      "address": "0x676B4e7649BC3d4E90BB4aF41eA585A4B9afE34e",
+      "transactionHash": "0xf5338db0bb694a9dcb05c3da53e61fdf4c13ab838ff7fb3bfea9af2c96361bd9"
+    },
+    "11155111": {
+      "events": {},
+      "links": {},
+      "address": "0x8686230D4F2c84c81d765E71aBD23f379B1cD885",
+      "transactionHash": "0x44890e5f269e40ff009b340ae5d93f8eeb3f4d7fe1d6dd4df6667f51e26e1488"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-01-03T18:27:33.128Z",
+  "updatedAt": "2024-01-18T15:12:03.020Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
