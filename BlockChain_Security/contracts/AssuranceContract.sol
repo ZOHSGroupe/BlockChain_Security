@@ -1,28 +1,40 @@
 // SPDX-License-Identifier: MIT 
 pragma solidity >=0.4.0 <0.9.0;
 
-contract AssuranceContract {
-    address owner;
-    uint256 dateDebut;
-    uint256 dateFin;
-    string zipFile;
-    string assuranceType;
-    string name;
-    string cin;
-    string marque;
-    string model;
+pragma experimental ABIEncoderV2;
 
-    function setAssurance(uint256 _dateDubut,uint256 _dateFin,string memory _zipFile,string memory _assuranceType,string memory _name,string memory _cin,string memory _marque,string memory _model) public{
-        dateDebut=_dateDubut;
-        dateFin=_dateFin;
-        zipFile=_zipFile;
-        assuranceType=_assuranceType;
-        name=_name;
-        cin=_cin;
-        marque=_marque;
-        model=_model;
+contract AssuranceContract {
+    struct AssuranceData {
+        address owner;
+        uint256 dateDebut;
+        uint256 dateFin;
+        string zipFile;
+        string assuranceType;
+        string name;
+        string cin;
+        string marque;
+        string model;
+        uint256 price;
     }
-    function getAssurance() public view returns(address _owner,uint256 _dateDubut,uint256 _dateFin,string memory _zipFile,string memory _assuranceType,string memory _name,string memory _cin,string memory _marque,string memory _model){
-        return(owner,dateDebut,dateFin,zipFile,assuranceType,name,cin,marque,model);
+
+    AssuranceData public assuranceData;
+
+    function setAssurance(uint256 _dateDebut, uint256 _dateFin, string memory _zipFile, string memory _assuranceType, string memory _name, string memory _cin, string memory _marque, string memory _model, uint256 _price) public {
+        assuranceData = AssuranceData({
+            owner: msg.sender,
+            dateDebut: _dateDebut,
+            dateFin: _dateFin,
+            zipFile: _zipFile,
+            assuranceType: _assuranceType,
+            name: _name,
+            cin: _cin,
+            marque: _marque,
+            model: _model,
+            price: _price
+        });
+    }
+
+    function getAssurance() public view returns (AssuranceData memory) {
+        return assuranceData;
     }
 }

@@ -1,6 +1,6 @@
-require('babel-register')
-require('dotenv').config()
-const HDWalletProvider = require("@truffle/hdwallet-provider")
+require('babel-register');
+require('dotenv').config();
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 const private_keys = [
   process.env.PRIVATE_KEY_0, // Assuming these are already strings
@@ -23,6 +23,7 @@ module.exports = {
       network_id: 11155111, // replace with the actual network id
       gas: 5500000,
       gasPrice: 123609748701,
+      port: 8545, // Change this to the desired port
     },
   },
   compilers: {
@@ -36,4 +37,4 @@ module.exports = {
       },
     },
   },
-}
+};

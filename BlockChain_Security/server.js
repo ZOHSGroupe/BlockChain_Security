@@ -16,9 +16,11 @@ app.use('/', express.static('public_static'));
 app.get('/getAccounts', (req, res) => {
   console.log("**** GET /getAccounts ****");
   truffle_connect.start(function (answer) {
+    console.log("Response from truffle_connect.start:", answer);
     res.send(answer);
-  })
+  });
 });
+
 
 //Get All Accounts
 app.get('/api/Accounts', (req, res) => {
@@ -101,27 +103,8 @@ app.get('/api/privatekey/:id', (req, res) => {
   })
 });
 
-//Get Book Info
-app.get('/api/get/book', (req, res) => {
-  truffle_connect.getBook( (answer) => {
-    res.send(answer);
-  });
-});
 
-//Sell Book
-app.post('/api/sell/book/:id', (req, res) => {
-  console.log(req.body);
-  var web3= new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
-  let fullname = req.body.fullname;
-  let description = req.body.description;
-  let price =web3.utils.toWei(req.body.price,'ether');
-    truffle_connect.start(function (answer) {
-      console.log(answer[req.params.id]);
-      truffle_connect.sellBook(answer[req.params.id],fullname,description,price, (answer) => {
-      res.send(answer);
-    });
-  });
-});
+
 
 app.post('/getBalance', (req, res) => {
   console.log("**** GET /getBalance ****");
@@ -155,7 +138,7 @@ app.post('/sendCoin', (req, res) => {
 app.listen(port, () => {
 
   // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-  truffle_connect.web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
+  truffle_connect.web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
 
   console.log("Express Listening at http://localhost:" + port);
 
