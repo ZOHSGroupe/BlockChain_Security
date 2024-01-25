@@ -39,34 +39,222 @@ async function sendTransaction(){
     "to":"0x122F485d61a7be1bd760F7f9fe2864E1E2eFF809",
     "gas":Number(21000).toString(16),
     "gasPrice":Number(2500000).toString(16),
-    "value":Number(1000000000000000000).toString(16)
+    "value":Number(400000000000000).toString(16)
   }]
   let result=await window.ethereum.request({method:"eth_sendTransaction",params}).catch((err)=>{
     console.log(err)
   })
 }
-function openMetaMask() {
-  try {
-      // Check if MetaMask is installed
-      if (window.ethereum) {
-          // Open MetaMask extension
-          window.ethereum.request({ method: "eth_requestAccounts" });
-      } else {
-          // MetaMask is not installed, provide a message or alternative action
-          alert("MetaMask is not installed. Please install MetaMask to create an account.");
-      }
-  } catch (error) {
+
+async function getAssurance() {
+  if (typeof window.ethereum !== "undefined") {
+    try {
+      const contractAddress = "0x7cF2E66E4Db26a39dA98a81D266A7CB26D259a73";
+      const abi = [
+        {
+          "constant": true,
+          "inputs": [],
+          "name": "assuranceData",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "dateDebut",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "dateFin",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "zipFile",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "assuranceType",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "cin",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "marque",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "model",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "constant": false,
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "_dateDebut",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_dateFin",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_zipFile",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_assuranceType",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_cin",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_marque",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_model",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_price",
+              "type": "uint256"
+            }
+          ],
+          "name": "setAssurance",
+          "outputs": [],
+          "payable": false,
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "constant": true,
+          "inputs": [],
+          "name": "getAssurance",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "dateDebut",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "dateFin",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "zipFile",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "assuranceType",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "cin",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "marque",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "model",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "price",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct AssuranceContract.AssuranceData",
+              "name": "",
+              "type": "tuple"
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ];
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const contract = new ethers.Contract(contractAddress, abi, provider);
+
+      // Call the getAssurance function
+      const assuranceData = await contract.getAssurance();
+      console.log("Assurance Data:", assuranceData);
+    } catch (error) {
       console.error(error);
-      alert("Error opening MetaMask. Make sure MetaMask is unlocked.");
+    }
+  } else {
+    document.getElementById("getAssuranceButton").innerHTML = "Please install MetaMask";
   }
 }
+
 async function execute() {
   if (typeof window.ethereum !== "undefined") {
     try {
       // Request account access if needed
       await window.ethereum.request({ method: 'eth_requestAccounts' });
 
-      const contractAddress = "0x8b01A8f9a3ab2e6Ec61Ff41F08a2F824ffcA718d";
+      const contractAddress = "0x7cF2E66E4Db26a39dA98a81D266A7CB26D259a73";
       const abi = [
         {
           "constant": true,
@@ -259,13 +447,13 @@ async function execute() {
       const params = [
         "13/01/2023",
         "13/02/2023",
-        "fjlksdjl",
-        "annuel",
-        "karam",
-        "lc455888",
-        "2024",
-        "mercedec",
-        ethers.utils.parseEther("1") // Specify the price in Ether
+        "fds",
+        "annusdel",
+        "karaxm",
+        "lc45d5888",
+        "20324",
+        "merscedec",
+        ethers.utils.parseEther("2") // Specify the price in Ether
       ];
       const overrides = { gasLimit: 2000000 };  // Adjust the gas limit as needed
       // Send transaction
@@ -288,7 +476,7 @@ module.exports = {
   execute,
   getBalance,
   sendTransaction,
-  openMetaMask
+  getAssurance
 };
 
 },{"ethers":1}]},{},[2])(2)
