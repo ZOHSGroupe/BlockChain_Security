@@ -16,6 +16,17 @@ async function connect() {
   }
 }
 
+async function getBalance(){
+  let balance=await window.ethereum.request({method:"eth_getBalance",
+    params:[
+      accounts[0],
+      'latest'
+    ]}).catch((err)=>{
+      console.log(err)
+    })
+    console.log(parseInt(balance)/Math.pow(10,18))
+} 
+
 async function execute() {
   if (typeof window.ethereum !== "undefined") {
     try {

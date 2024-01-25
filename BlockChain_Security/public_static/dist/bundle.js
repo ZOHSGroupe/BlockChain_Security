@@ -22,14 +22,23 @@ async function connect() {
       "Please install MetaMask";
   }
 }
-
+async function getBalance(){
+  let balance=await window.ethereum.request({method:"eth_getBalance",
+    params:[
+      accounts[0],
+      'latest'
+    ]}).catch((err)=>{
+      console.log(err)
+    })
+    console.log(parseInt(balance)/Math.pow(10,18))
+} 
 async function execute() {
   if (typeof window.ethereum !== "undefined") {
     try {
       // Request account access if needed
       await window.ethereum.request({ method: 'eth_requestAccounts' });
 
-      const contractAddress = "0x95bD3b2c96737e26DF000c5C2DE27a411030D3Fe";
+      const contractAddress = "0x8b01A8f9a3ab2e6Ec61Ff41F08a2F824ffcA718d";
       const abi = [
         {
           "constant": true,
@@ -37,14 +46,19 @@ async function execute() {
           "name": "assuranceData",
           "outputs": [
             {
-              "internalType": "uint256",
-              "name": "dateDebut",
-              "type": "uint256"
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
             },
             {
-              "internalType": "uint256",
+              "internalType": "string",
+              "name": "dateDebut",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
               "name": "dateFin",
-              "type": "uint256"
+              "type": "string"
             },
             {
               "internalType": "string",
@@ -90,14 +104,14 @@ async function execute() {
           "constant": false,
           "inputs": [
             {
-              "internalType": "uint256",
+              "internalType": "string",
               "name": "_dateDebut",
-              "type": "uint256"
+              "type": "string"
             },
             {
-              "internalType": "uint256",
+              "internalType": "string",
               "name": "_dateFin",
-              "type": "uint256"
+              "type": "string"
             },
             {
               "internalType": "string",
@@ -149,14 +163,19 @@ async function execute() {
             {
               "components": [
                 {
-                  "internalType": "uint256",
-                  "name": "dateDebut",
-                  "type": "uint256"
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
                 },
                 {
-                  "internalType": "uint256",
+                  "internalType": "string",
+                  "name": "dateDebut",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
                   "name": "dateFin",
-                  "type": "uint256"
+                  "type": "string"
                 },
                 {
                   "internalType": "string",
@@ -203,16 +222,15 @@ async function execute() {
           "stateMutability": "view",
           "type": "function"
         }
-      ]; // Your ABI
-
+      ];
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(contractAddress, abi, signer);
 
       // Set your parameters for setAssurance
       const params = [
-        1300,
-        4568,
+        "13/01/2023",
+        "13/02/2023",
         "fjlksdjl",
         "annuel",
         "karam",
@@ -240,6 +258,7 @@ async function execute() {
 module.exports = {
   connect,
   execute,
+  getBalance
 };
 
 },{"ethers":1}]},{},[2])(2)

@@ -6,8 +6,8 @@ pragma experimental ABIEncoderV2;
 contract AssuranceContract {
     struct AssuranceData {
         address owner;
-        uint256 dateDebut;
-        uint256 dateFin;
+        string dateDebut;
+        string dateFin;
         string zipFile;
         string assuranceType;
         string name;
@@ -19,7 +19,7 @@ contract AssuranceContract {
 
     AssuranceData public assuranceData;
 
-    function setAssurance(uint256 _dateDebut, uint256 _dateFin, string memory _zipFile, string memory _assuranceType, string memory _name, string memory _cin, string memory _marque, string memory _model, uint256 _price) public {
+    function setAssurance(string memory _dateDebut, string memory _dateFin, string memory _zipFile, string memory _assuranceType, string memory _name, string memory _cin, string memory _marque, string memory _model, uint256 _price) public {
         assuranceData = AssuranceData({
             owner: msg.sender,
             dateDebut: _dateDebut,

@@ -22,14 +22,51 @@ async function connect() {
       "Please install MetaMask";
   }
 }
-
+async function getBalance(){
+  const accounts = await ethereum.request({ method: "eth_accounts" });
+  let balance=await window.ethereum.request({method:"eth_getBalance",
+    params:[
+      accounts[0],
+      'latest'
+    ]}).catch((err)=>{
+      console.log(err)
+    })
+    console.log(parseInt(balance)/Math.pow(10,18))
+} 
+async function sendTransaction(){
+  let params=[{
+    "from":"0xFaD9F9e19075eD9a40168302e0dF2f6c31344B56",
+    "to":"0x122F485d61a7be1bd760F7f9fe2864E1E2eFF809",
+    "gas":Number(21000).toString(16),
+    "gasPrice":Number(2500000).toString(16),
+    "value":Number(1000000000000000000).toString(16)
+  }]
+  let result=await window.ethereum.request({method:"eth_sendTransaction",params}).catch((err)=>{
+    console.log(err)
+  })
+}
+function openMetaMask() {
+  try {
+      // Check if MetaMask is installed
+      if (window.ethereum) {
+          // Open MetaMask extension
+          window.ethereum.request({ method: "eth_requestAccounts" });
+      } else {
+          // MetaMask is not installed, provide a message or alternative action
+          alert("MetaMask is not installed. Please install MetaMask to create an account.");
+      }
+  } catch (error) {
+      console.error(error);
+      alert("Error opening MetaMask. Make sure MetaMask is unlocked.");
+  }
+}
 async function execute() {
   if (typeof window.ethereum !== "undefined") {
     try {
       // Request account access if needed
       await window.ethereum.request({ method: 'eth_requestAccounts' });
 
-      const contractAddress = "0x7cF2E66E4Db26a39dA98a81D266A7CB26D259a73";
+      const contractAddress = "0x8b01A8f9a3ab2e6Ec61Ff41F08a2F824ffcA718d";
       const abi = [
         {
           "constant": true,
@@ -249,6 +286,9 @@ async function execute() {
 module.exports = {
   connect,
   execute,
+  getBalance,
+  sendTransaction,
+  openMetaMask
 };
 
 },{"ethers":1}]},{},[2])(2)
