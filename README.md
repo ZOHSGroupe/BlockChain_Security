@@ -57,7 +57,7 @@ $ truffle migrate --network network_name
 10. **Create An Account In Metamask**
 
 ## Technologies Used
-![TechnologiesUsed](https://github.com/ZOHSGroupe/BlockChain_Security/tree/master/imgs/TechnologiesUsed.png)
+![TechnologiesUsed](https://github.com/ZOHSGroupe/BlockChain_Security/blob/master/imgs/TechnologiesUsed.png)
 ## Run Express Server
 11. **To run the Express server**
 ```bash
