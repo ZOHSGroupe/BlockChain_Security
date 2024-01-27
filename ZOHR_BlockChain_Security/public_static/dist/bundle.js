@@ -238,9 +238,10 @@ async function getAssurance() {
 }
 
 async function sendTransaction(param){
+  const accounts = await ethereum.request({ method: "eth_accounts" });
   let params = [{
-  "from": "0x122F485d61a7be1bd760F7f9fe2864E1E2eFF809",
-  "to": "0xFaD9F9e19075eD9a40168302e0dF2f6c31344B56",
+  "from": accounts[0],
+  "to": "0x122F485d61a7be1bd760F7f9fe2864E1E2eFF809",
   "gas": Number(21000).toString(16),
   "gasPrice": Number(2500000).toString(16),
   "value": Number(param * 1000000000000000000).toString(16)
