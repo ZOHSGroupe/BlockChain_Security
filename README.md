@@ -78,7 +78,7 @@ $ npm start
 ## Contact
 If you have any questions or issues, feel free to contact:
 
-- **Gmail** : [Ziad Ben Saada](ziad.bensaada7@gmail.com)
+- **Gmail** : ziad.bensaada7@gmail.com
 - **Linkedin** : [Ziad Ben Saada](https://www.linkedin.com/in/ziad-ben-saada-850219226/)
 
 
