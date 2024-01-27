@@ -54,8 +54,8 @@ $ truffle migrate --network network_name
 ```
 ## Install Metamask
 9. **Go to https://metamask.io/download/ to install**
-![Adding An Account In Metamask1](https://github.com/ZOHSGroupe/BlockChain_Security/blob/master/imgs/Adding An Account In Metamask1.png)
-![Adding An Account In Metamask2](https://github.com/ZOHSGroupe/BlockChain_Security/blob/master/imgs/Adding An Account In Metamask2.png)
+![Adding An Account In Metamask1](https://github.com/ZOHSGroupe/BlockChain_Security/blob/master/imgs/Adding%20An%20Account%20In%20Metamask1.png)
+![Adding An Account In Metamask2](https://github.com/ZOHSGroupe/BlockChain_Security/blob/master/imgs/Adding%20An%20Account%20In%20Metamask2.png)
 11. **Create An Account In Metamask**
 
 ## Technologies Used
