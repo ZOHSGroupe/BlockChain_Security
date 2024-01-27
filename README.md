@@ -57,7 +57,7 @@ $ truffle migrate --network network_name
     
 ![Install_Metamask](https://github.com/ZOHSGroupe/BlockChain_Security/blob/master/imgs/Install_Metamask.png)
 
-11. **Create An Account In Metamask**
+10. **Create An Account In Metamask**
     
 ![Adding An Account In Metamask1](https://github.com/ZOHSGroupe/BlockChain_Security/blob/master/imgs/Adding%20An%20Account%20In%20Metamask1.png)
 
