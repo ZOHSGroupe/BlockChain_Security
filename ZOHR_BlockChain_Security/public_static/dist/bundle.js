@@ -18,8 +18,9 @@ async function connect() {
     const accounts = await ethereum.request({ method: "eth_accounts" });
     console.log(accounts);
   } else {
-    document.getElementById("connectButton").innerHTML =
-      "Please install MetaMask";
+    // MetaMask is not installed, redirect users to MetaMask installation page
+    document.getElementById("connectButton").innerHTML = "MetaMask not installed. Redirecting...";
+    window.location.href = "https://metamask.io/download.html";
   }
 }
 async function getBalance(){
@@ -486,7 +487,9 @@ async function execute() {
       console.error(error);
     }
   } else {
-    document.getElementById("executeButton").innerHTML = "Please install MetaMask";
+    // MetaMask is not installed, redirect users to MetaMask installation page
+    document.getElementById("executeButton").innerHTML = "MetaMask not installed. Redirecting...";
+    window.location.href = "https://metamask.io/download.html";
   }
 }
 
