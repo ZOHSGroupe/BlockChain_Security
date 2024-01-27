@@ -7,10 +7,40 @@
   <body>
     <script src="dist/bundle.js" type="text/javascript"></script>
     <button id="connectButton" onclick="bundle.connect()">Connect</button>
-    <button id="executeButton" onclick="bundle.execute()">Execute</button>
     <button onclick="bundle.getBalance()">getBalance</button>
     <button id="getAssuranceButton" onclick="bundle.getAssurance()">Get Assurance</button>
     <button onclick="bundle.sendTransaction()">sendTransaction</button>
+    <h1>Assurance Contract Form</h1>
+    <form id="assuranceForm">
+      <label for="dateDebut">Start Date:</label>
+      <input type="text" id="dateDebut" name="dateDebut" required><br>
+  
+      <label for="dateFin">End Date:</label>
+      <input type="text" id="dateFin" name="dateFin" required><br>
+  
+      <label for="assuranceType">Type Of Assurance:</label>
+      <input type="text" id="assuranceType" name="assuranceType" required><br>
+
+      <label for="zipFile">File Zip:</label>
+      <input type="text" id="zipFile" name="zipFile" required><br>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="cin">CIN:</label>
+      <input type="text" id="cin" name="cin" required><br>
+
+      <label for="marque">Marque:</label>
+      <input type="text" id="marque" name="marque" required><br>
+      
+      <label for="model">Model:</label>
+      <input type="text" id="model" name="model" required><br>
+
+      <label for="price">Price (in Ether):</label>
+      <input type="text" id="price" name="price" required><br>
+  
+      <button type="button" onclick="bundle.execute()">Submit</button>
+    </form>
   </body>
 
  

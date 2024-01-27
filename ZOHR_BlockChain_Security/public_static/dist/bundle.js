@@ -445,18 +445,29 @@ async function execute() {
       const signer = provider.getSigner();
       const contract = new ethers.Contract(contractAddress, abi, signer);
 
-      // Set your parameters for setAssurance
-      const params = [
-        "13/01/2023",
-        "13/02/2023",
-        "fds",
-        "annusdel",
-        "karaxm",
-        "lc45d5888",
-        "20324",
-        "merscedec",
-        ethers.utils.parseEther("1") // Specify the price in Ether
-      ];
+
+      const dateDebut = document.getElementById("dateDebut").value;
+      const dateFin = document.getElementById("dateFin").value;
+      const assuranceType = document.getElementById("assuranceType").value;
+      const zipFile = document.getElementById("zipFile").value;
+      const name = document.getElementById("name").value;
+      const cin = document.getElementById("cin").value;
+      const marque = document.getElementById("marque").value;
+      const model = document.getElementById("model").value;
+      const price = document.getElementById("price").value;
+
+      const params = [dateDebut, dateFin, assuranceType,zipFile,name,cin,marque,model, ethers.utils.parseEther(price)];
+      // const params = [
+      //   "13/01/2023",
+      //   "13/02/2023",
+      //   "fds",
+      //   "annusdel",
+      //   "karaxm",
+      //   "lc45d5888",
+      //   "20324",
+      //   "merscedec",
+      //   ethers.utils.parseEther("1") // Specify the price in Ether
+      // ];
 
       const overrides = { gasLimit: 2000000 };  // Adjust the gas limit as needed
 
@@ -469,7 +480,7 @@ async function execute() {
       console.log('Transaction mined!');
 
       // Now, send another transaction
-      sendTransaction("1");
+      sendTransaction(price);
 
     } catch (error) {
       console.error(error);
