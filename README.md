@@ -52,9 +52,14 @@ $ truffle develop
 ```bash
 $ truffle migrate --network network_name
 ```
+## Install Metamask
+9. **Go to https://metamask.io/download/ to install**
+10. **Create An Account In Metamask**
 
+## Technologies Used
+![thechnologies](https://github.com/ZOHSGroupe/ML-system-recommendation/blob/main/imgs/technologies.png)
 ## Run Express Server
-9. **To run the Express server**
+11. **To run the Express server**
 ```bash
 # start application
 $ npm start
