@@ -33,18 +33,6 @@ async function getBalance(){
     })
     console.log(parseInt(balance)/Math.pow(10,18))
 } 
-async function sendTransaction(){
-  let params=[{
-    "from":"0xFaD9F9e19075eD9a40168302e0dF2f6c31344B56",
-    "to":"0x122F485d61a7be1bd760F7f9fe2864E1E2eFF809",
-    "gas":Number(21000).toString(16),
-    "gasPrice":Number(2500000).toString(16),
-    "value":Number(400000000000000).toString(16)
-  }]
-  let result=await window.ethereum.request({method:"eth_sendTransaction",params}).catch((err)=>{
-    console.log(err)
-  })
-}
 
 async function getAssurance() {
   if (typeof window.ethereum !== "undefined") {
@@ -246,6 +234,20 @@ async function getAssurance() {
   } else {
     document.getElementById("getAssuranceButton").innerHTML = "Please install MetaMask";
   }
+}
+
+async function sendTransaction(param){
+  let params = [{
+  "from": "0x122F485d61a7be1bd760F7f9fe2864E1E2eFF809",
+  "to": "0xFaD9F9e19075eD9a40168302e0dF2f6c31344B56",
+  "gas": Number(21000).toString(16),
+  "gasPrice": Number(2500000).toString(16),
+  "value": Number(param * 1000000000000000000).toString(16)
+}];
+
+  let result=await window.ethereum.request({method:"eth_sendTransaction",params}).catch((err)=>{
+    console.log(err)
+  })
 }
 
 async function execute() {
@@ -453,16 +455,22 @@ async function execute() {
         "lc45d5888",
         "20324",
         "merscedec",
-        ethers.utils.parseEther("2") // Specify the price in Ether
+        ethers.utils.parseEther("1") // Specify the price in Ether
       ];
+
       const overrides = { gasLimit: 2000000 };  // Adjust the gas limit as needed
-      // Send transaction
+
+      // Send transaction for setAssurance
       const transaction = await contract.setAssurance(...params, overrides);
 
       // Wait for the transaction to be mined
       await transaction.wait();
 
       console.log('Transaction mined!');
+
+      // Now, send another transaction
+      sendTransaction("1");
+
     } catch (error) {
       console.error(error);
     }
@@ -471,6 +479,8 @@ async function execute() {
   }
 }
 
+      
+      
 module.exports = {
   connect,
   execute,
